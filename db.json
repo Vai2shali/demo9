@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "fname": "vaishali",
+      "eml": "vaishalisargar@gmail.com",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "fname": "dcdcdc",
+      "lname": "sargar",
+      "eml": "vaishalisargar@gmail.com"
+    },
+    {
+      "fname": "adcdcc",
+      "lname": "sargar",
+      "eml": "vaishalisargar@gmail.com",
+      "id": 3
+    }
+  ]
+}

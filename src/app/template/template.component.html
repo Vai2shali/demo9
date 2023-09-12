@@ -1,0 +1,98 @@
+  <h4>Template Driven From</h4>
+  <form name="myForm" #frm="ngForm" (ngSubmit)="onSubmitData(frm)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="idd">
+    <div class="from-group">
+        <label for="firstname">First Name:</label> 
+        <input type="text" name="fname" class="form-control" #fname="ngModel" [(ngModel)]="fn" >
+           
+        
+    </div>
+     <div class="from-group">
+        <label for="lastname">last Name:</label> 
+        <input type="text" name="lname" class="form-control" #lname="ngModel"[(ngModel)]="ln">
+                     
+         
+      </div>
+  
+      <div class="from-group">
+      <label for="email">Email:</label>
+      <input type="email" name="eml" class="form-control" #eml="ngModel"[(ngModel)]="em">
+     
+
+
+
+  </div>
+  
+   <div class="from-group">
+    <label for="course">Course:</label>
+    <select name="course" id="" class="form-control" #course="ngModel" [(ngModel)]="cou">
+      <option *ngFor="let course of courses">{{course}}</option>
+    </select>
+  </div>
+     
+    <div class="from-group">
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="male" #gender="ngModel"[(ngModel)]="gen">
+    <label for="male">Male</label>
+    <input type="radio"name="gender"  value="female" #gender="ngModel" [(ngModel)]="gen">
+    <label for="female">Female</label>
+  </div>   
+       
+   
+  <div class="from-group">
+    <label for="password">Password:</label>
+    <input type="password" name="pass" class="form-control" #pass="ngModel"[(ngModel)]="ps">
+</div>     
+    
+  <div class="from-group">
+  <label for="cpassword">Confirm Password:</label>
+  <input type="password" name="cpass" class="form-control" #cpass="ngModel"[(ngModel)]="cpas">
+</div>  
+  
+  
+ 
+
+<div class="from-group">
+<button class="btn btn-dark">Submit</button>&nbsp;
+<button class="btn btn-info" (click)="onClickUpdateBTN(frm)">Edit</button>
+
+
+ </div>
+ </form> 
+   
+   
+   <div *ngIf="showFlag">
+    <table class="table table-responsive">
+      <tr> 
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Gender</th>
+        <th>Password</th>
+        <th>confirm Password</th>
+        <th>Action</th>
+           </tr>
+      <tr *ngFor="let dt of allData">
+        <td>{{dt.fname}}</td>
+        <td>{{dt.lname}}</td>
+        <td>{{dt.eml}}</td>
+        <td>{{dt.course}}</td>
+        <td>{{dt.gender}}</td>
+       <td>{{dt.pass}}</td>
+       <td>{{dt.cpass}}</td>
+       <td>
+<button class="btn btn-info" (click)="onDel(dt)">Delete</button>   
+ </td>
+ <td>
+  <button (click)="onUpdata(dt)" class="btn btn-outline-secondary" >Update</button>   
+   </td>
+ 
+      </tr>
+    </table>
+  
+
+
+ 
+     
+       

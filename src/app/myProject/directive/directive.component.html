@@ -1,0 +1,36 @@
+<h3>Directives Component</h3>
+<!-- 1.Stuctural directives> -->
+
+<!--*ngIf-->
+ <!-- <p *ngIf="showFlag && (age > 18)" >{{showText}}</p>   -->
+
+<!--*ngFor-->
+  <!-- <select class="from-n"  [(ngModel)]="selectedCountry">
+   <option *ngFor="let cnt of country">{{cnt}}</option>
+</select>  -->
+
+<!--*ngSwitch-->
+ <!-- <div [ngSwitch]="state">
+    <div *ngSwitchCase="'MP'">Madhya Pradesh</div>
+    <div *ngSwitchCase="'MH'">Maharashtra</div>
+   <div *ngSwitchCase="'KA'">Karnatak</div>
+</div>
+<div [ngSwitch]="state">
+ <div *ngSwitchCase="'MP'">Madhya Pradesh</div> 
+ <div *ngSwitchDefault>This is default case</div>   
+
+ </div>    -->
+
+ 2. Attribute directives -->
+<!--ngClass-->
+<!-- <p class="testClass">This is ng class</p>
+<p [ngClass]="testClass1">This is textClass</p>
+<p [ngClass]="(!showFlag && age > 18) ? 'test1' :'test2'" >This is the p tag with ng class</p> --> 
+
+<!--ngStyle-->
+ <!-- <p style="color:deeppink">This is ng style</p>
+<p [ngStyle]="{'color':'green'}">This is the style color</p>
+ <p [ngStyle]="showFlag ? testStyle2 :testStyle3">This is the ternory operator</p>  -->
+ 
+ <!-- *ngIf  -->
+  
